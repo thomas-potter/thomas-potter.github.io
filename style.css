@@ -1,0 +1,101 @@
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+#gumroad-follow-form-embed {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    min-width: 0px;
+    max-width: 100%;
+    vertical-align: bottom;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.75rem;
+    grid-template-columns: 4fr;
+    grid-auto-columns: max-content;
+    align-items: center;
+  }
+  
+  #gumroad-follow-form-embed-button {
+    margin: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+    min-width: 0px;
+    max-width: 100%;
+    vertical-align: center;
+    background: transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    --line-height: 1.5rem;
+    padding: 1rem 2rem;
+    border: 0.0625rem solid currentcolor;
+    color: currentcolor;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.14s ease-out 0s;
+    background-color: var(--primary);
+    color: var(--contrast-primary);
+    border-color: var(--primary);
+    border-width: 2px;
+  }
+  
+  #gumroad-follow-form-embed-button:hover {
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: .5rem .25rem 0 var(--primary);
+    background-color: var(--accent);
+    color: var(--contrast-accent);
+  }
+  
+  #gumroad-follow-form-embed-input {
+    margin-top: 50px;
+    margin: auto;
+    padding: 100px;
+    box-sizing: border-box;
+    min-width: 0px;
+    max-width: 100%;
+    vertical-align: right;
+    font-family: inherit;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    --line-height: 1.5rem;
+    border: 0.0625rem solid currentcolor;
+    border-radius: 0.5rem;
+    display: block;
+    width: 80%;
+    background-color: var(--background);
+    color: var(--primary);
+    --active-bg: #f4f4f0;
+    border-width: 2px;
+  }
+  
+  #gumroad-follow-form-embed-input:disabled {
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
+  
+  #gumroad-follow-form-embed-input::placeholder {
+    opacity: 0.8;
+  }
+  
+  #gumroad-follow-form-embed-input:focus-within {
+    outline: rgb(255, 144, 232) solid 0.125rem;
+  }
+  
+  #gumroad-follow-form-embed-input:read-only {
+    background-color: rgb(244, 244, 240);
+  }
+
+  .bold-placeholder::placeholder {
+    font-weight: bold;
+    
+  }
+
+  .spacer {
+    height: 15px;
+  }
