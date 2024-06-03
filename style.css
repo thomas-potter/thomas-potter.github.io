@@ -1,101 +1,200 @@
-<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+:root {
+    --heading-col: #FFFFFF;
+    --text-col: #ffffff;
+    --hover-col: #C72E2E;
 
-#gumroad-follow-form-embed {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    min-width: 0px;
-    max-width: 100%;
-    vertical-align: bottom;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 0.75rem;
-    grid-template-columns: 4fr;
-    grid-auto-columns: max-content;
-    align-items: center;
-  }
-  
-  #gumroad-follow-form-embed-button {
-    margin: 10px;
-    padding: 0px;
-    box-sizing: border-box;
-    min-width: 0px;
-    max-width: 100%;
-    vertical-align: center;
-    background: transparent;
-    font-size: 1rem;
-    line-height: 1.5;
-    --line-height: 1.5rem;
-    padding: 1rem 2rem;
-    border: 0.0625rem solid currentcolor;
-    color: currentcolor;
-    border-radius: 0.5rem;
-    font-family: inherit;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    cursor: pointer;
+    --button-col: #ffffff;
+    --button-col2: #C72E2E;
+    --hover-button-col:  #000000;
+    --hover-text-col: #000000;
+
+    --background-col: #101010;
+
+    --col-transition-duration: 0.3s;
+
+    --accent: #D2D2D2;
+    --contrast-accent: #8E8E8E;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;    
     text-decoration: none;
-    transition: all 0.14s ease-out 0s;
-    background-color: var(--primary);
-    color: var(--contrast-primary);
-    border-color: var(--primary);
-    border-width: 2px;
-  }
-  
-  #gumroad-follow-form-embed-button:hover {
-    transform: translate(-0.25rem, -0.25rem);
-    box-shadow: .5rem .25rem 0 var(--primary);
-    background-color: var(--accent);
-    color: var(--contrast-accent);
-  }
-  
-  #gumroad-follow-form-embed-input {
-    margin-top: 50px;
-    margin: auto;
-    padding: 100px;
-    box-sizing: border-box;
-    min-width: 0px;
-    max-width: 100%;
-    vertical-align: right;
-    font-family: inherit;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    --line-height: 1.5rem;
-    border: 0.0625rem solid currentcolor;
-    border-radius: 0.5rem;
-    display: block;
-    width: 80%;
-    background-color: var(--background);
-    color: var(--primary);
-    --active-bg: #f4f4f0;
-    border-width: 2px;
-  }
-  
-  #gumroad-follow-form-embed-input:disabled {
-    cursor: not-allowed;
-    opacity: 0.3;
-  }
-  
-  #gumroad-follow-form-embed-input::placeholder {
-    opacity: 0.8;
-  }
-  
-  #gumroad-follow-form-embed-input:focus-within {
-    outline: rgb(255, 144, 232) solid 0.125rem;
-  }
-  
-  #gumroad-follow-form-embed-input:read-only {
-    background-color: rgb(244, 244, 240);
-  }
+}
 
-  .bold-placeholder::placeholder {
-    font-weight: bold;
+body {
+    font-family: "Montserrat", sans-serif;
+    background: var(--background-col);
+}
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 5vh;
+    background: var(--background-col);
     
-  }
 
-  .spacer {
-    height: 15px;
-  }
+}
+
+.navdiv {
+    display: flex;
+
+    padding-right: 10vh;
+    padding-left: 10vh;
+    padding-top: 4vh;
+    font-size: 1.3rem;
+
+    font-weight: 700;
+    font-style: normal;
+
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--heading-col);
+}
+
+.logo-img {
+
+    width: 5vh; 
+    height: auto; 
+    padding-right: 2vh;
+
+}
+
+
+li {
+    list-style: none;
+    display: inline-block;
+    
+}
+
+li a{
+    color: var(--heading-col);
+    margin-right: 3vh;
+    transition: color var(--col-transition-duration) ease;
+}
+
+li a:hover{
+    color: var(--hover-col);    
+    
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background-col);
+}
+
+/* Left section styling */
+.left {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 80px; /* Margin from the top */
+}
+
+.rounded-image {
+    max-width: 100%; /* Ensure the image fits within the container */
+    max-height: 80vh; /* Adjust as needed to limit the image height */
+    height: auto;
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Right section styling */
+.right {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Center content vertically */
+    align-items: flex-start; /* Center content horizontally */
+    padding: 100px;
+    margin-top: 120px; 
+    color: var(--text-col); /* Set text color */
+}
+
+.content {
+    text-align: left; /* Align content to the left */
+}
+
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 5vh;
+}
+
+.cta-text {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.description-text {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 2vh;
+}
+
+.input-with-button {
+    display: flex;
+    flex-direction: column;
+}
+
+#gumroad-follow-form-embed-input {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding: 1rem;
+    width: 40rem;
+    border: 2px solid var(--button-col); /* White outline */
+    border-radius: 1rem;
+    color: white; /* White text */
+    background-color: var(--background-col); /* See-through white background */
+    margin-bottom: 20px;
+
+    margin: 20 auto;
+    display: block;
+}
+
+#gumroad-follow-form-embed-button {
+    font-family: "Montserrat", sans-serif;
+    padding: 1rem;
+    width: 15rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: var(--text-col);
+    background-color: var(--button-col2); /* See-through white background */
+    border: 2px solid var(--button-col2); /* White outline */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+
+    margin: 0 auto;
+    display: block;
+}
+
+#gumroad-follow-form-embed-button:hover {
+    transform: scale(1.05); /* Slightly scale on hover */
+    background-color: var(--button-col); /* Fully white background on hover */
+    color: var(--hover-text-col); 
+    border-color: var(--hover-button-col);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
